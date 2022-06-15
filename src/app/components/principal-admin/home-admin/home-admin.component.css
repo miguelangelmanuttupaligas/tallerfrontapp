@@ -1,0 +1,85 @@
+
+main {
+  padding: 2rem;
+  background: #f1f5f9;
+  min-height: calc(100vh - 70px);
+  margin-top: 70px;
+}
+.page-header {
+  display: flex;
+  justify-content: space-between;
+}
+.header-actions button {
+  outline: none;
+  color: #fff;
+  background: #5850ec;
+  border: none;
+  padding: .6rem 1rem;
+  margin-left: 1rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+.header-actions button span {
+  font-size: 1.2rem;
+  margin-right: .6rem;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 2rem;
+}
+.card-single {
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 4px 4px 10px rgba(0,0,0,.1);
+  border-radius: 4px;
+}
+.card-flex {
+  display: grid;
+  grid-template-columns: 70% auto;
+  align-items: center;
+}
+.card-head span {
+  display: block;
+  text-transform: uppercase;
+  color: #555;
+  font-size: .9rem;
+}
+.card-head small {
+  font-weight: 600;
+  color: #555;
+}
+.card-info h2 {
+  font-size: 2.2rem;
+  color: #333;
+}
+.card-chart span {
+  font-size: 5rem;
+}
+.card-chart.success span {
+  color: seagreen;
+}
+.card-chart.danger span {
+  color: tomato;
+}
+.card-chart.yellow span {
+  color: orangered;
+}
+
+.zone-graphic {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.chart {
+  background: #fff;
+  display: grid;
+  place-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  height: 250px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}

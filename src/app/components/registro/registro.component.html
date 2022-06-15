@@ -1,0 +1,48 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<app-header logueo="no"></app-header>
+
+<div class="wrapper fadeInDown" style="margin-top:80px;margin-bottom: 40px;">
+  <div id="formContent">
+    
+    <div class="fadeIn first">
+      <img class="img_login" src="../../../assets/img/icon_dog.png" alt="User Icon" width="250px"/>
+    </div>
+
+    <h1 class="text-center my-4 h2" ><b>REGISTRO</b></h1>
+    <form  class="pt-3" [formGroup] = "registroForm" (ngSubmit)="onRegistro(registroForm.value)">
+
+      <input type="text" id="username" class="fadeIn second"  placeholder="Ingrese su username" formControlName="username" required>
+      <input type="password" id="password" class="fadeIn third" placeholder="Ingrese su contraseña" formControlName="password" required>
+      <input type="text" id="email" class="fadeIn third" placeholder="Ingrese su email" formControlName="email" required>
+      <input type="text" id="nombre" class="fadeIn third" placeholder="Ingrese su nombre" formControlName="apellidos" required>
+      <input type="text" id="direccion" class="fadeIn third" placeholder="Ingrese su direccion" formControlName="direccion" required>
+      <input type="submit" class="fadeIn fourth" value="Registrarme">
+    </form>           
+      <p class="text-black h6 p-3">Al hacer clic en "Registrarme", aceptas nuestras Condiciones, la Política de
+                  datos y la Política de cookies.</p>             
+      <hr>
+
+      <div class="m-3">
+        <span class="mb-3">¿Ya tienes una cuenta? <a class="iniciaSesion underlineHover"
+          routerLink="/login"> Inicia sesión</a></span>
+      </div>    
+  </div>
+</div>
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+

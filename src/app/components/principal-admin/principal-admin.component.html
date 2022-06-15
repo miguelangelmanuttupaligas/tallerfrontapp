@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+<input type="checkbox" name="" id="sidebar_toggle">
+<div class="sidebar_own">
+  <div class="sidebar_brand">
+    <div class="brand_flex">
+      <img src="../../../assets/img/icon_logo.png" width="100px" alt="img-logo">
+      <div class="brand_icons">
+        <span class="las la-user-circle" (click)="showUserProfile()"></span>
+        
+        <div class="user-settings" *ngIf="setting">
+         <!-- <a routerLink="/interfaz-admin/admin-profile" (click)="showUserProfile()"><span class="las la-user-cog">  User profile</span></a>-->
+          <span class="las la-sign-out-alt" (click)="logout()">  Sign out</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar_main">
+    <div class="sidebar_user">
+      <img src="../../../assets/img/icon_user.jpg" width="100px" alt="img-user">
+      <div>
+        <h3>{{currentUser.username}}</h3>
+        <span>{{currentUser.rol}}</span>
+      </div>
+    </div>
+    <div class="sidebar_menu">
+      <div class="menu_head">
+        <span>Dashboard</span>
+      </div>
+      <ul>
+        <li>
+          <a routerLink="/interfaz-admin/finance-dashboard">
+            <span class="las la-calendar"></span>Solicitudes
+          </a>
+        </li>
+        <li>
+          <a routerLink="/interfaz-admin/mascotas-admin">
+            <span class="las la-users"></span>Mascotas
+          </a>
+        </li>
+        <li>
+          <a routerLink="/interfaz-admin/mascotas-admin">
+            <span class="las la-users"></span>Users
+          </a>
+        </li>
+      </ul>
+      <!--<div class="menu_head">
+        <span>Applications</span>
+      </div>
+      <ul>
+        <li>
+          <a href="">
+            <span class="las la-calendar"></span>Calendar
+          </a>
+        </li>
+        <li>
+          <a routerLink="/interfaz-admin/gestion-products" >
+            <span  class="las la-shopping-cart"></span>Ecommerce
+          </a>
+        </li>
+        <li>
+          <a routerLink="/interfaz-admin/gestion-users">
+            <span class="las la-users"></span>Users
+          </a>
+        </li>
+      </ul>-->
+    </div>
+  </div>
+</div>
+<div class="main_content">
+  <header>
+    <div class="menu_toggle">
+      <label for="sidebar_toggle">
+        <span class="las la-bars"></span>
+      </label>
+    </div>
+    <div class="header_icons">
+      <span class="las la-search"></span>
+      <span class="las la-bookmark"></span>
+      <span class="las la-sms"></span>
+    </div>
+  </header>
+  <router-outlet></router-outlet>
+</div>

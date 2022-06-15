@@ -1,0 +1,88 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<header>
+    <nav class=" position-fixed fixed-top bg-white navbar navbar-expand-lg border-bottom shadow-sm ocultar">
+        <div class="container container-fluid">
+          <a class="navbar-brand" routerLink ="/principal/listado">
+            <h3 class="my-0 mr-md-auto font-weight-normal text-dark ">Adop Pet <i class="fas fa-paw"></i></h3>
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item dropdown" routerLinkActive="active">
+                <a class="nav-link " routerLink ="/principal/listado">
+                    Adopción
+                </a>
+              </li>
+              <li class="nav-item dropdown" routerLinkActive="active">
+               <!--<a class="nav-link " href="https://appdogchat.azurewebsites.net/" target="_blank">
+                    Chat
+                </a>-->
+                <a class="nav-link " routerLink ="/principal/chat">
+                  Chat
+              </a>
+              </li>
+              <li class="nav-item dropdown" routerLinkActive="active">
+                <a class="nav-link " routerLink="/principal/registroMascota">
+                    Registrar
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="d-flex" style="align-items: center;">
+            <button class="btn btn-info m-3 p-2" >
+                <i class="fas fa-user mx-1 text-white"> </i><span class="user-text text-white">{{ currentUser.username}}</span>
+            </button>
+              <a style="cursor: pointer;"(click)="logout()" ><i class="fa fa-fw fa-power-off"></i></a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- -----PARTE RESPONSIVO- dark--------- -->
+  <div class="ocultar-responsive-nav">
+    <nav class="navbar navbar-expand-lg navbar-light padding bg-white " style="border: 1px solid rgba(33, 37, 41, 0.12);"><!--NAVEGACION SEGUNDO-->
+        <div id="top_menu_container" class="container justify-content-between">
+            <!-- SIRVE CUANDO SE ACHICA LA VENTANA DE ANCHO-->
+            <!-- LADO IZQ- BOTON DE DESPLAZAMIENTO-->
+            <button class="navbar-toggler tp-navbar-toggler collapsed text-dark" type="button" data-bs-toggle="collapse" aria-label="Menu" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" style="border: 0;">
+                <i class="fas fa-bars"></i>
+            </button>
+            <!-- LADO CENTRO- LOGOTIPO-->
+            <a class="navbar-brand logo d-lg-none" routerLink ="/principal/listado">
+              <h3 class="my-0 mr-md-auto font-weight-normal text-dark ">Adop Pet <i class="fas fa-paw"></i></h3>
+            </a>
+            <!-- LADO DERECHO- -->
+            <div class="tp-account-info" style="width: 111px;">
+                <button class="btn btn-info magin-rig p-1 user-text" >
+                    <i class="fas fa-user mx-1 text-white"> </i><span class="text-white">{{ currentUser.username}}</span>
+                </button>
+                  <a style="cursor: pointer;color: black;" class="user-text" (click)="logout()" ><i class="fa fa-fw fa-power-off"></i></a>
+            </div>
+            <!-- LADO IZQ- OPCIONES DE LA NAV-->
+            <div id="navbarScroll" class="collapse navbar-collapse order-last order-lg-0 text-dark">
+                <ul id="top_menu" class="nav navbar-nav flex-grow-1 navbar-nav-scroll">
+                    <li class="nav-item" routerLinkActive="active">
+                      <a class="nav-link " routerLink ="/principal/listado">
+                          Adopción
+                      </a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                      <a class="nav-link " routerLink ="/principal/chat">
+                          Chat
+                      </a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                      <a class="nav-link " routerLink="/principal/registroMascota">
+                          Registrar
+                      </a>
+                    </li>
+                </ul>
+        </div>
+
+        </div>
+    </nav>
+</div>
+</header>

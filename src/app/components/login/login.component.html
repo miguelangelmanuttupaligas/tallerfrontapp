@@ -1,0 +1,36 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<app-header logueo="no"></app-header>
+
+<div class="wrapper fadeInDown" style="margin-top:90px;margin-bottom: 50px;">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img class="img_login" src="../../../assets/img/icon_dog.png" alt="User Icon" width="250px"/>
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+      <input type="text" id="username" class="fadeIn second"  placeholder="Username" formControlName="username">
+      <input type="password" id="password" class="fadeIn third" placeholder="Password" formControlName="password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Error Message -->
+    <div class="alert alert-danger" *ngIf="errorStatus">
+      <p>Usuario o password incorrecto</p>
+    </div>
+
+    <!-- Create account -->
+    <div id="formFooter">
+      <a class="underlineHover" routerLink="/registroUsuario">Crear una cuenta</a>
+    </div>
+
+  </div>
+</div>
+<app-footer></app-footer>

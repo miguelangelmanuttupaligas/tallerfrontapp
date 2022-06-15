@@ -1,0 +1,31 @@
+<header>
+    <nav class=" position-fixed fixed-top bg-white navbar navbar-expand-lg border-bottom shadow-sm">
+        <div class="container container-fluid">
+          <a class="navbar-brand" routerLink ="/">
+            <h3 class="my-0 mr-md-auto font-weight-normal text-dark ">Adop Pet <i class="fas fa-paw"></i></h3>
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link " href="#nosotros">Nosotros</a>
+              </li>
+              <li class="nav-item dropdown" routerLinkActive="active">
+                <a class="nav-link" href="#nosotros">
+                    Adopción
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button class="btn btn-outline-dark m-3" *ngIf="searchLogin == 'si'" >
+            <a href="#" class="text-decoration-none text-primary" routerLink ="/login">
+              <i class="fas fa-user mx-1"></i>
+              Login
+            </a>
+          </button>
+        </div>
+      </nav>
+</header>
+

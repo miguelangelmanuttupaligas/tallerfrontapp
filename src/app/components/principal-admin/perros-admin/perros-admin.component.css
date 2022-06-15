@@ -1,0 +1,10 @@
+main {
+    padding: 2rem;
+    background: #f1f5f9;
+    min-height: calc(100vh - 70px);
+    margin-top: 70px;
+  }
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+  }
